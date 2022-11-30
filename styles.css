@@ -51,10 +51,88 @@ ul {
 
 }
 
+.navbar a:hover {
+    color: lightblue;
+}
+
 .navbar .container {
     /*it will put them into a row*/
     /*'Flexbox' and 'home.about.contact*/
     display: flex;
     /*it will put a space between the ones above*/
     justify-content: space-between;
+    align-items: center;
+    /*to place the text in the middle*/
+    height: 100%;
+}
+
+/*to put 'home.about.contact' in a row*/
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    /*some space between 'home.about.contact'*/
+    margin-left: 20px;
+}
+
+.header {
+    background-color: #0151cc;
+    color: #fff;
+    min-height: 400px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.header img {
+    max-width: 400px;
+    margin: 100px;
+
+}
+
+.header .container {
+    display: flex;
+    /*to align the text with the img*/
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boxes .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    flex: 1;
+    background: #0a51cc;
+    color: #fff;
+    /*round at the borders*/
+    border-radius: 10px;
+    /*space on top bottom and between them*/
+    margin: 20px 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    /*inside*/
+    padding: 15px 20px;
+}
+
+.box h2 {
+    margin-right: 10px;
+}
+
+/*to adjust text and img when responsive*/
+@media(max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .boxes .container {
+        display: block;
+        text-align: center;
+    }
 }
